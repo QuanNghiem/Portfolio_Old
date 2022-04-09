@@ -1,0 +1,28 @@
+.nav_container {
+    background-color: #20232a;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav_btn {
+    font-size: 2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 2rem;
+    border: none;
+    outline: none;
+    background-color: #20232a;
+    color: #ffffff;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.nav_btn:hover {
+    /* text-decoration: underline; */
+    color: #61dafb;
+    transition: 0.2s ease-out;
+}

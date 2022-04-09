@@ -1,0 +1,31 @@
+.icon_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.link_btn {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.2s ease-out;
+    text-decoration: none;
+}
+
+.link_btn:hover {
+    text-decoration: underline;
+    color: #61dafb;
+    transition: 0.2s ease-out;
+}
