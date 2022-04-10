@@ -11,7 +11,7 @@
     font-size: 3rem;
     letter-spacing: 0.01rem;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .sub_title {
@@ -23,5 +23,9 @@
 }
 
 .content_container {
-    background-color: #dcdcdc;
+    background-color: #5f555500;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }

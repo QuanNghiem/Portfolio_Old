@@ -1,6 +1,7 @@
 import '../Home/Home.css'
 import Navigation from '../Navigation/Navigation';
 import Link from '../Link/Link';
+import About from '../About/About';
 
 function Home () {
     return (
@@ -20,7 +21,7 @@ function Home () {
 
 
             <div className='content_container'>
-
+                <About />
             </div>
         </div>
     );
