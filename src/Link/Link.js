@@ -9,25 +9,40 @@ function Link () {
     const [ email, setValue ] = useState('Email');
 
     function changeEmail (event) {
-        setValue(event);
+        // setValue(event);
+        navigator.clipboard.writeText('quan.nghiem2904@gmail.com');
+        let notice = document.getElementById('emailNotice');
+        notice.classList = [];
+        notice.classList.add('emailSpan');
+        notice.classList.add('fadeIn');
+        setTimeout(() => {
+            let notice = document.getElementById('emailNotice');
+            notice.classList = [];
+            notice.classList.add('emailSpan');
+            notice.classList.add('fadeOut');
+            // setValue('Email');
+        }, 3000)
     }
 
     return (
         <div className='icon_container'>
             <a className='link_btn' href={ `${process.env.PUBLIC_URL}/Resume.pdf` } target='_blank' download>
-                <FontAwesomeIcon className='fa-lg font_awesome' icon={ faSave } />
+                <FontAwesomeIcon className='fa-lg font_awesome_link' icon={ faSave } />
                 Resume
             </a>
-            <a className='link_btn' onMouseEnter={ () => changeEmail('quan.nghiem2904@gmail.com') } onMouseLeave={ () => changeEmail('Email') } href="mailto:quan.nghiem2904@gmail.com">
-                <FontAwesomeIcon className='fa-lg font_awesome' icon={ faEnvelope } />
-                { email }
-            </a>
+            <div className='span_container'>
+                <a className='link_btn' onClick={ () => changeEmail('quan.nghiem2904@gmail.com') } href="mailto:quan.nghiem2904@gmail.com">
+                    <FontAwesomeIcon className='fa-lg font_awesome_link' icon={ faEnvelope } />
+                    { email }
+                    <span className='emailSpan hidden' id='emailNotice'>Copied!</span>
+                </a>
+            </div>
             <a className='link_btn' href="https://www.linkedin.com/in/quannghiem/" rel="noreferrer" target="_blank">
-                <FontAwesomeIcon className='fa-lg font_awesome' icon={ faLinkedin } />
+                <FontAwesomeIcon className='fa-lg font_awesome_link' icon={ faLinkedin } />
                 Linkedin
             </a>
             <a className='link_btn' href="https://github.com/QuanNghiem" rel="noreferrer" target="_blank">
-                <FontAwesomeIcon className='fa-lg font_awesome' icon={ faGithub } />
+                <FontAwesomeIcon className='fa-lg font_awesome_link' icon={ faGithub } />
                 Github
             </a>
         </div >
